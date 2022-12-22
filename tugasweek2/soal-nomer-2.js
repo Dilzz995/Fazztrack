@@ -1,11 +1,11 @@
 //Tugas Nomor 2
 
 const biodata = {
-  name: "Budi Santoso",
+  name: "Muhammad Risky Fadillah",
   age: 26,
   isMarried: false,
   hobbies: ["Bermain Game", "Bulu Tangkis", "Menontin Film"],
-  school: [
+  schoolList: [
     {
       namaSekolah: "SMA Khadijah Surabaya",
       yearIn: 2011,
@@ -21,24 +21,13 @@ const biodata = {
   ],
   skill: [
     {
-      HTML: "Advance",
-      CSS: "Advance",
+      HTML: "Beginner",
+      CSS: "Beginner",
       JavaScript: "Beginner",
     },
   ],
 };
 
-// console.log(biodata.nama)
-// console.log(biodata.alamat.jalan)
+console.log(biodata);
 console.log(biodata.school[0].namaSekolah);
 // console.log(biodata.sekolah[0].namaSekolah)
-
-// biodata.school.map((sekolah, index)=> {
-//     console.log(index, sekolah.jurusan)
-// })
-// biodata.hobbies.map((hobie)=> {
-//     console.log(hobie)
-// })
-
-//berlaku untuk tipedata primitif
-// console.log(typeof biodata.sekolah)

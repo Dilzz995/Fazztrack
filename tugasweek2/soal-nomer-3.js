@@ -1,7 +1,7 @@
 const nilaiMurid = [
   {
     mataPelajaran: "Matematika",
-    nilai: 79,
+    nilai: 200,
   },
   {
     mataPelajaran: "Bahasa Indonesia",
@@ -17,27 +17,33 @@ const nilaiMurid = [
   },
 ];
 
-let total = 0;
-nilaiMurid.forEach((item) => {
-  total += item.nilai;
-});
-
-console.log(total);
-const nilaiRata2 = total / nilaiMurid.length;
-console.log(nilaiRata2);
+// console.log(...nilaiMurid);
 
 function nilaiRata2Murid() {
+  let total = 0;
+  nilaiMurid.forEach((item) => {
+    if (typeof item.nilai !== typeof 0 || item.nilai === null) {
+      console.log(`nilai harus nomor dan harus terisi`);
+    } else {
+      total += item.nilai;
+    }
+  });
+  const nilaiRata2 = total / nilaiMurid.length;
+  console.log(nilaiRata2);
   if (nilaiRata2 >= 90 && nilaiRata2 <= 100) {
-    return "Grade = A";
+    console.log("Grade = A");
   } else if (nilaiRata2 >= 80 && nilaiRata2 <= 89) {
-    return "Grade = B";
+    console.log("Grade = B");
   } else if (nilaiRata2 >= 70 && nilaiRata2 <= 79) {
-    return "Grade = C";
+    console.log("Grade = C");
   } else if (nilaiRata2 >= 60 && nilaiRata2 <= 69) {
-    return "Grade = D";
-  } else {
-    return "Grade = E";
+    console.log("Grade = D");
+  } else if (nilaiRata2 >= 0 && nilaiRata2 <= 59) {
+    console.log("Grade = E");
+  } else if (nilaiRata2 >= 100) {
+    console.log("angka yang anda input terlalu besar");
   }
 }
 
-console.log(nilaiRata2Murid(nilaiRata2));
+nilaiRata2Murid();
+// console.log(nilaiMurid[0].mataPelajaran);
